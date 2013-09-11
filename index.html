@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="master.css" />
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+
+    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+    <script src="script.js"></script>
+    <meta charset=utf-8 />
+    <title>RevPAR</title>
+    <script>
+      //   $(function() {
+      //$( "#slider" ).slider();
+      //});
+      $(function() {
+      $( "#slider1" ).slider({
+      orientation: "vertical",
+      range: "min",
+      min: 0,
+      max: 150,
+      value: 60,
+      slide: function( event, ui ) {
+      $( "#occupancy" ).val( ui.value );
+      }
+      });
+      $( "#occupancy" ).val( $( "#slider1" ).slider( "value" ) );
+      });
+
+      $(function() {
+        $( "#slider2" ).slider({
+          orientation: "vertical",
+          range: "min",
+          min: 0,
+          max: 500,
+          value: 60,
+          slide: function( event, ui ) {
+            $( "#adr" ).val( ui.value );
+          }
+        });
+        $( "#adr" ).val( $( "#slider2" ).slider( "value" ) );
+      });
+    </script>
+  </head>
+  <body>
+
+    <!-- Navigation -->
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="brand" href="./index.html">Revenue Management Calc</a>
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li class="">
+              <a href="./index.html">Home</a>
+              </li>
+
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <h1>Calculate RevPAR</h1>
+      <p>A revenue management kpi to asses profitability.</p>
+      <div id="form">
+        <form>
+          <label for="occupancy" >Occupancy:</label>
+          <input id="occupancy" type="text" name="occupancy" maxlength="4"  value="0"/>&nbsp;%
+          <br />
+          <label>ADR:</label>
+          <input id="adr" type="text" name="adr" width="8" value="0"/>&nbsp;$
+          <label for="revpar">RevPAR:</label>
+
+          <input id="revpar" type="text" name="revpar" value="0" />&nbsp;$
+
+
+          <div id="controlers">
+            <div id="occupancy-control">
+              <h4>Occupancy</h4>
+              <div id="slider1"></div>
+            </div>
+            <div id="adr-control">  
+              <h4>ADR</h4>
+              <div id="slider2"></div>
+            </div>
+
+          </div>
+        </body>
+      </html>
