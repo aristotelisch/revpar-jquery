@@ -11,38 +11,6 @@
     <script src="script.js"></script>
     <meta charset=utf-8 />
     <title>RevPAR</title>
-    <script>
-      //   $(function() {
-      //$( "#slider" ).slider();
-      //});
-      $(function() {
-      $( "#slider1" ).slider({
-      orientation: "vertical",
-      range: "min",
-      min: 0,
-      max: 150,
-      value: 60,
-      slide: function( event, ui ) {
-      $( "#occupancy" ).val( ui.value );
-      }
-      });
-      $( "#occupancy" ).val( $( "#slider1" ).slider( "value" ) );
-      });
-
-      $(function() {
-        $( "#slider2" ).slider({
-          orientation: "vertical",
-          range: "min",
-          min: 0,
-          max: 500,
-          value: 60,
-          slide: function( event, ui ) {
-            $( "#adr" ).val( ui.value );
-          }
-        });
-        $( "#adr" ).val( $( "#slider2" ).slider( "value" ) );
-      });
-    </script>
   </head>
   <body>
 
@@ -55,7 +23,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="brand" href="./index.html">Revenue Management Calc</a>
+          <a class="brand" href="./index.html">Revenue Management KPI</a>
           <div class="nav-collapse collapse">
             <ul class="nav">
               <li class="">
@@ -70,7 +38,7 @@
 
     <div class="container">
       <h1>Calculate RevPAR</h1>
-      <p>A revenue management kpi to asses profitability.</p>
+      <p>A revenue management kpi to assess profitability.</p>
       <div id="form">
         <form>
           <label for="occupancy" >Occupancy:</label>
