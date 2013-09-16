@@ -1,11 +1,9 @@
 <!DOCTYPE html>
 <html>
   <head>
-
     <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
     <link rel="stylesheet" href="master.css" />
     <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
-
     <script src="http://codeorigin.jquery.com/jquery-1.10.2.min.js"></script>
     <script src="http://codeorigin.jquery.com/ui/1.10.3/jquery-ui.min.js"></script>
     <script src="script.js"></script>
@@ -38,29 +36,36 @@
 
     <div class="container">
       <h1>Calculate RevPAR</h1>
-      <p>A revenue management kpi to assess profitability.</p>
-      <div id="form">
+      <p>RevPAR is the industry standard KPI used to assess profitability in hotels. It is essential in the forecasting
+      and benchmarking proccess along with the formulation of pricing, distribution and availability strategies. 
+      </p>
+      <div id="form" class="well">
         <form>
           <label for="occupancy" >Occupancy:</label>
           <input id="occupancy" type="text" name="occupancy" maxlength="4"  value="0"/>&nbsp;%
           <br />
           <label>ADR:</label>
           <input id="adr" type="text" name="adr" width="8" value="0"/>&nbsp;$
+          
           <label for="revpar">RevPAR:</label>
-
           <input id="revpar" type="text" name="revpar" value="0" />&nbsp;$
-
 
           <div id="controlers">
             <div id="occupancy-control">
               <h4>Occupancy</h4>
               <div id="slider1"></div>
             </div>
-            <div id="adr-control">  
+            <div id="adr-control">
               <h4>ADR</h4>
               <div id="slider2"></div>
             </div>
-
+          </div>
+        </div> <!-- end form well-->
+          <!-- sticky footer -->
+          <div id="footer">
+            <div class="container">
+              <p class="muted credit">RevPAR calculator by <a href="http://happybit.eu">Aristotelis Christou</a>.</p>
+            </div>
           </div>
         </body>
       </html>
