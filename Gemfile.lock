@@ -60,3 +60,5 @@ DEPENDENCIES
   guard-livereload
   guard-redcarpet
   guard-webrick
+  rb-fsevent
+  rb-inotify
