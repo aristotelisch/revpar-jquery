@@ -15,5 +15,5 @@ guard 'redcarpet' do
   watch(/^.+(\.html\.md)$/)
 end
 
-guard 'webrick' do
+guard 'webrick', host: '127.0.0.1', :docroot => 'public' do
 end
